@@ -42,3 +42,8 @@ $ notim research/memo.md
 # equals to `mkdir -p ~/.notim/note/research && vim ~/.notim/note/research/memo.md`
 ```
 
+## Update
+
+```sh
+$ notim --update
+```
