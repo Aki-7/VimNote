@@ -40,6 +40,7 @@ main() {
 
 update() {
   git pull
+  echo "\nRestart your shell to apply the update\n"
 }
 
 # ---------- main ---------- #
