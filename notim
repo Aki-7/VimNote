@@ -8,11 +8,46 @@ NOTIM_EODITOR_CMD=${NOTIM_EDITOR_CMD:-vim}
 NOTIM_HOME=${NOTIM_HOME:-~/.notim}
 NOTIM_NOTE=${NOTIM_HOME%/}/note
 
-# ---------- main command ---------- #
+# ---------- process command line arguments ---------- #
 
-NOTIM_NOTE_PATH=${NOTIM_NOTE%/}/$1
-NOTIM_NOTE_DIR=`dirname $NOTIM_NOTE_PATH`
+while [ $# -gt 0 ]
+do
+key="$1"
 
-mkdir -p $NOTIM_NOTE_DIR
-vim $NOTIM_NOTE_PATH
+case $key in
+  --update)
+  UPDATE_FLAG=YES
+  shift
+  ;;
+  *)
+  shift
+  ;;
+esac
+done
+
+
+# ---------- main func ---------- #
+
+main() {
+  NOTIM_NOTE_PATH=${NOTIM_NOTE%/}/$1
+  NOTIM_NOTE_DIR=`dirname $NOTIM_NOTE_PATH`
+  
+  mkdir -p $NOTIM_NOTE_DIR
+  vim $NOTIM_NOTE_PATH
+}
+
+# ---------- update func ---------- #
+
+update() {
+  git pull
+}
+
+# ---------- main ---------- #
+
+if [ $UPDATE_FLAG = "YES" ]; then
+  update
+  exit
+fi
+
+main
 
