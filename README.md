@@ -15,8 +15,18 @@ $ curl https://raw.githubusercontent.com/Aki-7/notim/master/install.sh | sh
 #### 2. Set alias
 
 ```sh
-$ echo 'alias notim="~/.notim/notim"' >> ~/.bashrc
+$ echo 'alias notim="~/.notim/bin/notim"' >> ~/.bashrc
 ```
+
+#### 3. Zsh autocompletion
+
+```sh
+$ echo 'source ~/.notim/bin/_notim.zsh' >> ~/.zshrc
+```
+
+#### 4. Restart shell
+
+Apply the settings above.
 
 ## Usage
 

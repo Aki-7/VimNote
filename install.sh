@@ -7,12 +7,16 @@ if [ -e $NOTIM_HOME ]; then
   exit 0
 fi
 
-mkdir -p ~/.notim
+mkdir -p $NOTIM_HOME
 
 cd $NOTIM_HOME
 
+mkdir note
+mkdir bin
+
+cd bin
+
 git clone https://github.com/Aki-7/notim.git .
 
-mkdir note
 
 echo "\nInstall succeeded!\n"
