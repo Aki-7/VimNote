@@ -42,6 +42,13 @@ $ notim research/memo.md
 # equals to `mkdir -p ~/.notim/note/research && vim ~/.notim/note/research/memo.md`
 ```
 
+#### Remove Note
+
+```sh
+$ notim --remove research/memo.md
+# equals to `rm -r ~/.notim/note/research/memo.md`
+```
+
 ## Update
 
 ```sh
