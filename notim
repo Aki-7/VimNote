@@ -6,7 +6,8 @@ cd `dirname $0`
 
 NOTIM_EODITOR_CMD=${NOTIM_EDITOR_CMD:-vim}
 NOTIM_HOME=${NOTIM_HOME:-~/.notim}
-NOTIM_NOTE=${NOTIM_HOME%/}/note
+NOTIM_NOTE_ROOT=${NOTIM_HOME%/}/note
+NOTIM_NOTE_PATH=${NOTIM_NOTE_ROOT%/}/$1
 
 # ---------- process command line arguments ---------- #
 
@@ -29,7 +30,6 @@ done
 # ---------- main func ---------- #
 
 main() {
-  NOTIM_NOTE_PATH=${NOTIM_NOTE%/}/$1
   NOTIM_NOTE_DIR=`dirname $NOTIM_NOTE_PATH`
   
   mkdir -p $NOTIM_NOTE_DIR
