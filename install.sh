@@ -14,3 +14,5 @@ cd $NOTIM_HOME
 git clone https://github.com/Aki-7/notim.git .
 
 mkdir note
+
+echo "\nInstall succeeded!\n"
