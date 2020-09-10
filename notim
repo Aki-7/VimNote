@@ -45,7 +45,7 @@ update() {
 
 # ---------- main ---------- #
 
-if [ $UPDATE_FLAG = "YES" ]; then
+if [ "$UPDATE_FLAG" = "YES" ]; then
   update
   exit
 fi
