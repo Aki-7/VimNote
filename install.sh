@@ -3,7 +3,7 @@ NOTIM_HOME=~/.notim
 
 if [ -e $NOTIM_HOME ]; then
   echo "~/.notim is already exist. Remove ~/.notim to use notim."
-  echo "If you already have notim, you can update it via notim --update command."
+  echo "If you already have notim, you can update it via 'notim --update' command."
   exit 0
 fi
 
