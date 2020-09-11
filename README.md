@@ -1,6 +1,6 @@
 # README
 
-### Simple vim note app
+### Simple vim note-taking app
 
 Just a simple wrapper of `vim` command
 
@@ -38,7 +38,7 @@ $ notim memo.md
 ```
 
 ```sh
-$ notim research/memo.md 
+$ notim research/memo.md
 # equals to `mkdir -p ~/.notim/note/research && vim ~/.notim/note/research/memo.md`
 ```
 
