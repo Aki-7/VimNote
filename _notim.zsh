@@ -1,4 +1,4 @@
-NOTIM_HOME=${NOTIM_HOME:-~$HOME/.notim}
+NOTIM_HOME=${NOTIM_HOME:~$HOME/.notim}
 NOTIM_NOTE_ROOT=${NOTIM_HOME%/}/note
 
 _notim() {
