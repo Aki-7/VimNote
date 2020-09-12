@@ -4,9 +4,9 @@ cd `dirname $0`
 
 # ---------- set up variables ---------- #
 
-NOTIM_EODITOR_CMD=${NOTIM_EDITOR_CMD:-vim}
-NOTIM_HOME=${NOTIM_HOME:-~/.notim}
-NOTIM_NOTE_ROOT=${NOTIM_HOME%/}/note
+NOTIM_EODITOR_CMD=${NOTIM_EDITOR_CMD:-"vim"}
+NOTIM_HOME=${NOTIM_HOME:-"~/.notim"}
+NOTIM_NOTE_ROOT=${NOTIM_HOME}/note
 
 # ---------- process command line arguments ---------- #
 
@@ -21,12 +21,12 @@ case $key in
   ;;
   --remove)
   REMOVE_FLAG=YES
-  NOTIM_REMOVE_NOTE_PATH=${NOTIM_NOTE_ROOT%/}/$2
+  NOTIM_REMOVE_NOTE_PATH=${NOTIM_NOTE_ROOT}/$2
   shift
   shift
   ;;
   *)
-  NOTIM_NOTE_PATH=${NOTIM_NOTE_ROOT%/}/$1
+  NOTIM_NOTE_PATH=${NOTIM_NOTE_ROOT}/$1
   shift
   ;;
 esac
