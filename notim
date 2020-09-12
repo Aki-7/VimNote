@@ -5,7 +5,7 @@ cd `dirname $0`
 # ---------- set up variables ---------- #
 
 NOTIM_EODITOR_CMD=${NOTIM_EDITOR_CMD:-"vim"}
-NOTIM_HOME=${NOTIM_HOME:-"~/.notim"}
+NOTIM_HOME=${NOTIM_HOME:-"$HOME/.notim"}
 NOTIM_NOTE_ROOT=${NOTIM_HOME}/note
 
 # ---------- process command line arguments ---------- #

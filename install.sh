@@ -1,5 +1,5 @@
 
-NOTIM_HOME=~/.notim
+NOTIM_HOME=$HOME/.notim
 
 if [ -e $NOTIM_HOME ]; then
   printf "\033[31m%s\033[m\n" 'Error...'
