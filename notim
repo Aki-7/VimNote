@@ -74,7 +74,7 @@ remove() {
 # ---------- update func ---------- #
 
 update() {
-  git pull
+  git pull --ff-only
   echo "\nRestart your shell to apply the update\n"
 }
 
